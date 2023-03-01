@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+<div>
+    <h2>
+        Enter 2 Numbers of your choice.
+    </h2>
+    <div>
+        <label for="fistNo">1st Number :</label>
+        <input class="input1" id="fistNo" type="text" name="fistNo"><span id="errorMssg" class="reqStyle"> </span>
+    </div>
+    <br>
+    <div>
+        <label for="secondNo">2nd Number :</label>
+        <input id="secondNo" class="input2" type="text" name="secondNo"><span id="errorMssg1" class="reqStyle">
+            </span>
+    </div>
+    <br>
+    
+    <div>
+        <label for="result"> Your Result :
+            <input id="result" type="text" name="result" readonly></label>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button id="add" value="add" name="add" onclick="txn(this)">Add</button>
+        <button id="sub" value="sub" name="sub" onclick="txn(this)">Subtract</button>
+        <button id="mul" value="mul" name="mul" onclick="txn(this)">Multiply</button>
+        <button id="div" value="div" name="div" onclick="txn(this)">Divide</button>
+    </div>
+</div>
+</body>
+</html>
