@@ -1,7 +1,7 @@
 $(document).ready(() => {
     const userNameRegex = /^[A-Za-z0-9 '.-]+$/;
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@northeastern.edu$/;
-    const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,10}$/;;
+    const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,10}$/;
 
     let isUserNameValid = false;
     let isEmailValid = false;
@@ -82,7 +82,4 @@ $(document).ready(() => {
     $('#username').keyup(validateUserName).blur(validateUserName);
     $('#email').keyup(validateEmail).blur(validateEmail);
     $('#password').keyup(validatePassword).blur(validatePassword);
-
-
-
 })
