@@ -6,6 +6,7 @@ $(document).ready(() => {
     let isUserNameValid = false;
     let isEmailValid = false;
     let isPasswordValid = false;
+    let userName = "";
 
     const enableSubmit = () => {
         $('#submit').prop("disabled", !(isUserNameValid && isEmailValid && isPasswordValid));
@@ -41,6 +42,7 @@ $(document).ready(() => {
         } else {
             userNameError.text("");
             setUserNameValid(true);
+            userName = value;
         }
     }
 
@@ -77,9 +79,14 @@ $(document).ready(() => {
             setPasswordValid(true);
         }
     }
-    
+
+    const submitForm = () => {
+        window.location.href = window.location.origin + `/Assignment6/Calculator/calculator.html?username=${userName}`;
+        return false;
+    }
 
     $('#username').keyup(validateUserName).blur(validateUserName);
     $('#email').keyup(validateEmail).blur(validateEmail);
     $('#password').keyup(validatePassword).blur(validatePassword);
+    $('#submit').click(submitForm);
 })

@@ -1,4 +1,6 @@
 $(document).ready(() => {
+    $("#header").text("Hi " + new URL(window.location).searchParams.get("username") + ", Welcome to Calculator Application");
+
     const numberRegex = /^-?((\d*\.\d+|\d+))$/;
     let isFirstNumberInValid = true;
     let isSecondNumberInValid = true;
